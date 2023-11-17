@@ -1,0 +1,68 @@
+.education {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    background-color: rgb(251, 251, 251);
+}
+
+.education__pic {
+    width: 230px;
+    height: 287px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+.education__title {
+    width: 80%;
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4A4A4A;
+    justify-content: center;
+    margin: 25px 0px;
+}
+
+.education__text {
+    width: 80%;
+    font-family: 'Proxima-Nova', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #4A4A4A;
+    margin-bottom: 24px;
+}
+
+.education-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .education-button__learn {
+        background: #4A4A4A;
+        border: #4A4A4A;
+        font-family: 'Proxima-Nova', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        width: 232px;
+        margin: 0px 15px;
+        height: 45px;
+    }
+}

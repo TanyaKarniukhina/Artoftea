@@ -1,0 +1,24 @@
+.video-block {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+}
+
+.video-block__title {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 32px;
+    font-family: 'Cormorant';
+    color: #4A4A4A;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.video-block__video {
+    width: 100%;
+    // width: 82%;
+    // display: flex;
+    // margin: 0 auto;
+}

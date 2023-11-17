@@ -1,0 +1,113 @@
+.why-us {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F4F4F4;
+}
+
+.why-us-top {
+    width: 100%;
+    height: 100%;
+    padding: 28px 28px 10px 28px;
+    display: flex;
+    justify-content: center;
+    .why-us-top__pic {
+        width: 250px;
+        height: 175px;
+    }
+}
+
+.why-us-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .why-us-bottom__subtitle {
+        font-family: 'Proxima-Nova', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        letter-spacing: 0.1em;
+        color: #4A4A4A;
+        margin: 19px 0px;
+        text-align: center;
+    }
+    .why-us-bottom__title {
+        width: 80%;
+        font-family: 'Cormorant', sans-serif;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 110%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #4A4A4A;
+        margin: 0;
+    }
+    .why-us-bottom-block-icons {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        .why-us-bottom-icons {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .why-us-bottom-icons__pic {
+                width: 60px;
+                height: 40px;
+            }
+            .why-us-bottom-icons__text {
+                color: rgb(74, 74, 74);
+                font-family: 'Proxima-Nova', sans-serif;
+                font-size: 9.2px;
+                font-weight: 400;
+                line-height: 18.4844px;
+                letter-spacing: 1px;
+                text-align: center;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+.why-us-bottom-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .why-us-bottom-button__shop {
+        background: #4A4A4A;
+        border: #4A4A4A;
+        font-family: 'Proxima-Nova', sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #FFFFFF;
+        width: 232px;
+        margin: 30px 15px;
+        height: 45px;
+    }
+}
+
+.why-us-bottom__subtext {
+    width: 80%;
+    font-family: 'Proxima-Nova', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+

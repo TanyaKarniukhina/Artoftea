@@ -1,3 +1,6 @@
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
+
 .wholesaler {
     width: 100%;
     height: 100%;
@@ -5,8 +8,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px 50px;
+    padding: 50px 0px 50px;
     background-color: rgb(205, 215, 217);
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .wholesaler-top {
@@ -17,6 +24,9 @@
         justify-content: center;
         align-items: center;
         object-fit: cover;
+        @media screen and (min-width: 1000px) {
+            height: 230px;
+        }
     }
 }
 
@@ -25,6 +35,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @media screen and (min-width: 1000px) {
+        width: 45%;
+    }
     .wholesaler-bottom__title {
         width: 90%;
         font-family: 'Cormorant', serif;
@@ -34,9 +47,15 @@
         display: flex;
         align-items: center;
         text-align: center;
-        color: #4A4A4A;
+        color: $dgray;
         justify-content: center;
         margin: 25px 0px;
+        @media screen and (min-width: 1000px) {
+            font-size: 40px;
+            width: 70%;
+            line-height: 50px;
+            margin-top: 50px;
+        }
     }
     .wholesaler-bottom-button {
         width: 100%;
@@ -45,16 +64,15 @@
         justify-content: center;
         align-items: center;
         .wholesaler-bottom-button__become {
-            background: #4A4A4A;
-            border: #4A4A4A;
-            font-family: 'Proxima-Nova', sans-serif;
-            font-weight: 400;
-            font-size: 12px;
-            letter-spacing: 0.1em;
-            color: #FFFFFF;
-            width: 232px;
+            @include sgbutton ();
             margin: 0px 15px;
-            height: 45px;
+            @media screen and (min-width: 1000px) {
+                @include bgbutton ();
+                margin-bottom: 10px;
+            }
+        }
+        .wholesaler-bottom-button__become:hover {
+            background-color: $bh;
         }
     }
 }

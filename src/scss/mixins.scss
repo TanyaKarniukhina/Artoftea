@@ -1,0 +1,29 @@
+@mixin sgbutton {
+    background: $dgray;
+    border: $dgray;
+    font-family: 'Proxima-Nova', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: $white;
+    width: 232px;
+    height: 45px;
+}
+
+@mixin bgbutton {
+    width: 323px;
+    height: 51px;
+    font-size: 14px;
+}
+
+@mixin stitle {
+    font-family: 'Cormorant', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $dgray;
+    justify-content: center;
+}

@@ -1,12 +1,17 @@
+@import "../scss/variables.scss";
+
 .carousel {
     width: 100% !important;
-    height: 100% !important;
+    height: 250px !important;
 }
 .carousel-item-next, .carousel-item-prev, .carousel-item.active {
     display: flex !important;
     justify-content: center !important;
     margin-right: 0px;
     margin-bottom: -50px;
+    @media screen and (min-width: 700px) {
+        margin-top: 60px;
+    }
 }
 .carousel-indicators {
     display: flex !important;
@@ -15,37 +20,61 @@
     align-items: center !important;
     margin: 0 auto !important;
     flex-direction: column;
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+        margin: 30px auto !important;
+    }
     img:nth-child(1) {
         width: 190px !important;
         height: 35px !important;
         display: flex;
         object-fit: contain;
+        margin-top: 20px !important;
+        @media screen and (min-width: 700px) {
+            width: 200px !important;
+            height: 45px !important;
+            margin-top: 0px !important;
+        }
     }
     img:nth-child(2) {
         width: 170px !important;
         height: 20px !important;
         display: flex;
         object-fit: contain;
+        @media screen and (min-width: 700px) {
+            width: 180px !important;
+            height: 25px !important;
+        }
     }
     img:nth-child(3) {
         width: 200px !important;
-        height: 30px !important;
+        height: 27px !important;
         display: flex;
         object-fit: contain;
+        @media screen and (min-width: 700px) {
+            width: 205px !important;
+            height: 35px !important;
+        }
     }
 }
 h5 {
     width: 90% !important;
-    height: 250px;
+    height: 200px;
     font-family: 'Proxima-Nova', sans-serif !important;
     font-weight: 400 !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     line-height: 30px !important;
     text-align: center !important;
     margin: 50px 0px !important;
-    color: #4A4A4A !important;
+    color: $dgray !important;
     padding: 5px 20px !important;
     display:flex;
     align-items: center;
     justify-content: center;
+    @media screen and (min-width: 700px){
+        width: 590px !important;
+        font-size: 22px !important;
+        height: 156px;
+        line-height: 40px !important;
+    }
 }

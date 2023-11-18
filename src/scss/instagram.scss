@@ -1,3 +1,5 @@
+@import "../scss/variables.scss";
+
 .instagram {
     width: 100%;
     height: 100%;
@@ -17,8 +19,14 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: $gray;
     margin-bottom: 30px;
+    @media screen and (min-width: 700px) {
+        margin-bottom: 0px;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding: 0;
+    }
     .instagram-top__text {
         font-family: 'Proxima-Nova', sans-serif;
         font-weight: 400;
@@ -29,9 +37,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @media screen and (min-width: 700px) {
+            width: 90%;
+        }
     }
     .fa-brands {
-        color: #000000;
         font-size: 30px;
         display: flex;
         justify-content: center;
@@ -53,21 +63,67 @@
 }
 
 .instagram-bottom {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    .instagram-bottom__title {
-        line-height: 1.2;
-        font-family: 'Cormorant', serif;
-        font-weight: 300;
-        font-size: 20px;
-        margin-bottom: 30px;
+    @media screen and (min-width: 700px) {
+        width: 80%;
     }
-    .instagram-bottom__posts {
-        width: 192px;
-        height: 192px;
-        object-fit: cover;
+    .instagram-bottom-posts {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @media screen and (min-width: 700px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .instagram-bottom__posts {
+            width: 232px;
+            height: 232px;
+            object-fit: cover;
+        }
+        .instagram-bottom__posts-desktop {
+            display: none;
+            width: 232px;
+            height: 232px;
+            object-fit: cover;
+            @media screen and (min-width: 700px) {
+                display: flex;
+            }
+        }
+    }
+    .instagram-bottom__posts:hover {
+        transition: all 0.5s;
+        filter: brightness(50%);
+    }
+    .instagram-bottom__posts-desktop:hover {
+        transition: all 0.5s;
+        filter: brightness(50%);
+    }
+}
+
+.instagram-container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 700px) {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.instagram__title {
+    line-height: 1.2;
+    font-family: 'Cormorant', serif;
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 700px) {
+        position: relative;
+        left: 135px;
+        font-size: 24px;
     }
 }

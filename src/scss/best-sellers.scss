@@ -1,24 +1,22 @@
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
+
 .best-sellers {
     width: 100%;
     height: 100%;
     margin-bottom: 80px;
-    margin-top: 100px;
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .best-sellers__title {
-    font-family: 'Cormorant', serif;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 36px;
-    display: flex;
+    @include stitle ();
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #4A4A4A;
-    justify-content: center;
+    @media screen and (min-width: 700px) {
+        font-size: 42px;
+    }
 }
 
 .best-sellers-list {
@@ -45,7 +43,7 @@
                 font-size: 11.2px;
                 align-items: center;
                 letter-spacing: 0.1em;
-                color: #4A4A4A;
+                color: $dgray;
                 text-transform: uppercase;
                 margin-top: 25px;
                 margin-bottom: 10px;
@@ -59,7 +57,7 @@
                 align-items: center;
                 justify-content: center;
                 letter-spacing: 0.05em;
-                color: #B5B5B5;
+                color: $sbcolor;
             }
         }
 }
@@ -72,16 +70,14 @@
     justify-content: center;
     align-items: center;
     .best-sellers-button__shop {
-        background: #4A4A4A;
-        border: #4A4A4A;
-        font-family: 'Proxima-Nova', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        color: #FFFFFF;
-        width: 232px;
+        @include sgbutton ();
         margin: 30px 15px;
-        height: 45px;
+        @media screen and (min-width: 700px) {
+            @include bgbutton ();
+        }
+    }
+    .best-sellers-button__shop:hover {
+        background-color: $bh;
     }
 }
 

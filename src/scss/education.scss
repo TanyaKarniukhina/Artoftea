@@ -1,3 +1,6 @@
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
+
 .education {
     width: 100%;
     height: 100%;
@@ -7,62 +10,87 @@
     align-items: center;
     padding: 40px 0px;
     background-color: rgb(251, 251, 251);
+    @media screen and (min-width: 700px) {
+        flex-direction: row;
+    }
 }
 
-.education__pic {
-    width: 230px;
-    height: 287px;
+.education-top {
     display: flex;
     justify-content: center;
     align-items: center;
-    object-fit: cover;
+    @media screen and (min-width: 700px) {
+        order: 2;
+        width: 30%;
+    }
+    .education__pic {
+        width: 230px;
+        height: 287px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
 }
 
-.education__title {
-    width: 80%;
-    font-family: 'Cormorant', serif;
-    font-weight: 300;
-    font-size: 30px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #4A4A4A;
-    justify-content: center;
-    margin: 25px 0px;
-}
-
-.education__text {
-    width: 80%;
-    font-family: 'Proxima-Nova', sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #4A4A4A;
-    margin-bottom: 24px;
-}
-
-.education-button {
-    width: 100%;
+.education-bottom {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .education-button__learn {
-        background: #4A4A4A;
-        border: #4A4A4A;
+    @media screen and (min-width: 700px) {
+        order: 1;
+        width: 50%;
+    }
+    .education__title {
+        width: 80%;
+        font-family: 'Cormorant', serif;
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: $dgray;
+        justify-content: center;
+        margin: 25px 0px;
+        @media screen and (min-width: 700px) {
+            font-size: 40px;
+        }
+    }
+    .education__text {
+        width: 80%;
         font-family: 'Proxima-Nova', sans-serif;
         font-weight: 400;
         font-size: 12px;
-        letter-spacing: 0.1em;
-        color: #FFFFFF;
-        width: 232px;
-        margin: 0px 15px;
-        height: 45px;
+        line-height: 1.65;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $dgray;
+        margin-bottom: 24px;
+        @media screen and (min-width: 700px) {
+            font-size: 16px;
+        }
+    }
+    .education-button {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .education-button__learn {
+            @include sgbutton ();
+            margin: 0px 15px;
+            @media screen and (min-width: 700px) {
+                @include bgbutton ();
+                margin-bottom: 20px;
+            }
+        }
+        .education-button__learn:hover {
+            background-color: $bh;
+        }
     }
 }

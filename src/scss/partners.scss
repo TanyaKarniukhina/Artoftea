@@ -1,3 +1,5 @@
+@import "../scss/variables.scss";
+
 .partners {
     width: 100%;
     height: 100%;
@@ -7,6 +9,9 @@
     align-items: center;
     padding: 32px 0px;
     background-color: rgb(251, 251, 251);
+    @media screen and (min-width: 700px) {
+        padding: 60px 0px 32px;
+    }
 }
 
 .partners__title {
@@ -18,9 +23,12 @@
     display: flex;
     align-items: center;
     text-align: center;
-    color: #4A4A4A;
+    color: $dgray;
     justify-content: center;
     margin-bottom: 32px;
+    @media screen and (min-width: 700px) {
+        font-size: 40px;
+    }
 }
 
 .partners-companies {

@@ -1,3 +1,6 @@
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
+
 .help {
     width: 100%;
     height: 100%;
@@ -5,57 +8,68 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 65px 0px;
+    padding: 65px 0px 0px;
     background-image: url("https://www.artoftea.com/cdn/shop/files/AOT-Home-Banner-1.jpg?v=1690574075");
     background-size: cover;
     background-position: center center;
-}
-
-.help__title {
-    width: 80%;
-    font-family: 'Cormorant', serif;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 36px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #4A4A4A;
-    justify-content: center;
-    margin-bottom: 27px;
-}
-
-.help__text {
-    width: 90%;
-    font-family: 'Proxima-Nova', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #4A4A4A;
-}
-
-.help-button {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    .help-button__take {
-        background: #4A4A4A;
-        border: #4A4A4A;
-        font-family: 'Proxima-Nova', sans-serif;
-        font-weight: 400;
-        font-size: 12px;
-        letter-spacing: 0.1em;
-        color: #FFFFFF;
-        width: 232px;
-        margin: 30px 15px 0px;
-        height: 45px;
+    @media screen and (min-width: 700px) {
+        height: 395px;
     }
 }
+
+.help-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media screen and (min-width: 870px) {
+        position: absolute;
+        right: 230;
+        width: 400px;
+    }
+    .help__title {
+        @include stitle ();
+        width: 80%;
+        margin-bottom: 40px;
+        @media screen and (min-width: 700px) {
+            font-size: 42px;
+            width: 400px;
+        }
+    }
+    .help__text {
+        font-family: 'Proxima-Nova', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: $dgray;
+        @media screen and (min-width: 700px) {
+            font-size: 18px;
+            width: 400px;
+        }
+    } 
+    .help-button {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .help-button__take {
+            @include sgbutton ();
+            margin: 30px 15px;
+            @media screen and (min-width: 700px) {
+                @include bgbutton ();
+                margin-bottom: 90px;
+            }
+        }
+        .help-button__take:hover {
+            background-color: $bh;
+        }
+    }
+}
+
 
